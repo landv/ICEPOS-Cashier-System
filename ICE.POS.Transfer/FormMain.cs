@@ -267,7 +267,7 @@
                         break;
                     }
                     int millsecond = (int)tbNum.Value * 60 * 1000;
-                    if (!(Thread.CurrentThread.ThreadState == System.Threading.ThreadState.Running))
+                    if ((Thread.CurrentThread.ThreadState == System.Threading.ThreadState.Running))
                     {
                         Thread.Sleep(millsecond);
                     }
